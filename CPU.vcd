@@ -1,0 +1,234 @@
+$date
+	Sun Sep 24 23:34:13 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module CPU_tb $end
+$var reg 1 ! clk_i $end
+$scope module CPU $end
+$var wire 1 " arith_imm_op_w $end
+$var wire 1 # arith_op_w $end
+$var wire 1 $ branch_op_w $end
+$var wire 1 ! clk_i $end
+$var wire 1 % imm_op_w $end
+$var wire 1 & load_op_w $end
+$var wire 1 ' store_op_w $end
+$var wire 5 ( rs2_w [4:0] $end
+$var wire 5 ) rs1_w [4:0] $end
+$var wire 5 * rd_w [4:0] $end
+$var wire 32 + op2_w [31:0] $end
+$var wire 32 , op1_w [31:0] $end
+$var wire 32 - memory_w [31:0] $end
+$var wire 32 . instruction_w [31:0] $end
+$var wire 12 / imm_w [11:0] $end
+$var wire 6 0 f_w [5:0] $end
+$var wire 32 1 alu_w [31:0] $end
+$var reg 6 2 led_o [5:0] $end
+$var reg 32 3 pc [31:0] $end
+$scope module ALU $end
+$var wire 32 4 op2_i [31:0] $end
+$var wire 32 5 result_o [31:0] $end
+$var wire 32 6 op1_i [31:0] $end
+$var wire 6 7 f_i [5:0] $end
+$scope function alu $end
+$var reg 6 8 f_i [5:0] $end
+$var reg 32 9 op1_i [31:0] $end
+$var reg 32 : op2_i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module DMemory $end
+$var wire 32 ; addr_i [31:0] $end
+$var wire 1 ! clk_i $end
+$var wire 32 < data_o [31:0] $end
+$var wire 1 ' we_i $end
+$var wire 32 = data_i [31:0] $end
+$upscope $end
+$scope module IDecoder $end
+$var wire 20 > u_imm [19:0] $end
+$var wire 5 ? shamt [4:0] $end
+$var wire 12 @ s_imm [11:0] $end
+$var wire 5 A rs2_o [4:0] $end
+$var wire 5 B rs1_o [4:0] $end
+$var wire 5 C rd_o [4:0] $end
+$var wire 7 D opcode [6:0] $end
+$var wire 21 E j_imm [20:0] $end
+$var wire 32 F instruction_i [31:0] $end
+$var wire 12 G i_imm [11:0] $end
+$var wire 7 H funct7 [6:0] $end
+$var wire 3 I funct3 [2:0] $end
+$var wire 13 J b_imm [12:0] $end
+$var reg 6 K f_o [5:0] $end
+$var reg 12 L imm_o [11:0] $end
+$upscope $end
+$scope module IMemory $end
+$var wire 32 M addr_i [31:0] $end
+$var wire 32 N instruction_o [31:0] $end
+$var wire 12 O led_w [11:0] $end
+$upscope $end
+$scope module RFile $end
+$var wire 1 ! clk_i $end
+$var wire 32 P data_i [31:0] $end
+$var wire 5 Q rd_i [4:0] $end
+$var wire 5 R rs1_i [4:0] $end
+$var wire 5 S rs2_i [4:0] $end
+$var wire 1 T we_i $end
+$var wire 32 U op2_o [31:0] $end
+$var wire 32 V op1_o [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 V
+bx U
+1T
+b11100 S
+b0 R
+b1 Q
+b111100 P
+b111111 O
+b11110000000000000010010011 N
+b0 M
+b111100 L
+b10010 K
+b100000100000 J
+b0 I
+b1 H
+b111100 G
+b11110000000000000010010011 F
+b111100 E
+b10011 D
+b1 C
+b0 B
+b11100 A
+b100001 @
+b11100 ?
+b11110000000000 >
+bx =
+bx <
+b111100 ;
+b111100 :
+b0 9
+b10010 8
+b10010 7
+b0 6
+b111100 5
+b111100 4
+b0 3
+bx 2
+b111100 1
+b10010 0
+b111100 /
+b11110000000000000010010011 .
+bx -
+b0 ,
+bx +
+b1 *
+b0 )
+b11100 (
+0'
+0&
+1%
+0$
+0#
+1"
+0!
+$end
+#1000
+b111111 P
+b111111 1
+b111111 5
+b111111 ;
+b111111 :
+b10001 8
+0"
+1'
+b111111 4
+b10001 0
+b10001 7
+b10001 K
+b111111 /
+b111111 L
+b111100 +
+b111100 =
+b111100 U
+b1 ?
+b10100000100000 E
+b10000100000010 >
+b100000111110 J
+b111111 @
+b100001 G
+b1 (
+b1 A
+b1 S
+b10 I
+b11111 *
+b11111 C
+b11111 Q
+b100011 D
+b10000100000010111110100011 .
+b10000100000010111110100011 F
+b10000100000010111110100011 N
+b1 3
+b1 M
+1!
+#2000
+0!
+#3000
+bx P
+bx 1
+bx 5
+bx ;
+bx 9
+bx +
+bx =
+bx U
+bx ,
+bx 6
+bx V
+bz ?
+bz0 E
+bz >
+bz0 J
+bz @
+bz G
+bz (
+bz A
+bz S
+bz )
+bz B
+bz R
+bz H
+bz I
+bz *
+bz C
+bz Q
+bz D
+b111100 2
+bz .
+bz F
+bz N
+b10 3
+b10 M
+bx -
+bx <
+1!
+#4000
+0!
+#5000
+b11 3
+b11 M
+1!
+#6000
+0!
+#7000
+b100 3
+b100 M
+1!
+#8000
+0!
